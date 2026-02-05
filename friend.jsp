@@ -1,0 +1,61 @@
+<%-- 
+    Document   : friend
+    Created on : 5 Feb, 2026, 5:14:37 PM
+    Author     : epe
+--%>
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Friend Request 😄</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+        }
+
+        h1 {
+            margin-bottom: 30px;
+        }
+
+        button {
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+        }
+
+        #noBtn {
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Will you be my friend? 🤝</h1>
+
+<button onclick="yesClicked()">Yes 😊</button>
+<button id="noBtn" onmouseover="moveNo()">No 😒</button>
+
+<script>
+    function yesClicked() {
+        alert("Yay! We are friends now 😄🎉");
+    }
+
+    function moveNo() {
+        const noBtn = document.getElementById("noBtn");
+        const x = Math.random() * (window.innerWidth - 100);
+        const y = Math.random() * (window.innerHeight - 50);
+        noBtn.style.left = x + "px";
+        noBtn.style.top = y + "px";
+    }
+</script>
+
+</body>
+</html>
